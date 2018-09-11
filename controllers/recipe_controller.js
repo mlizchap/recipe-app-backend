@@ -14,6 +14,12 @@ module.exports = {
     index(req, res) {
         Recipe.find({})
             .then(users => res.send(users))
+    },
+    delete(req, res) {
+        const id = req.params.id;
+
+        Recipe.findByIdAndRemove({ _id: id})
+            .then(recipe => res.send(recipe))
     }
     
 }
