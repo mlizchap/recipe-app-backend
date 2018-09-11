@@ -15,19 +15,21 @@ module.exports = {
         Recipe.find({})
             .then(users => res.send(users))
     },
-    delete(req, res) {
+    delete(req, res, next) {
         const id = req.params.id;
 
         Recipe.findByIdAndRemove({ _id: id})
             .then(recipe => res.send(recipe))
+            .catch(next)
     },
-    edit(req, res) {
+    edit(req, res, next) {
         const id = req.params.id;
         const recipeProps = req.body;
 
         Recipe.findOneAndUpdate({ _id: id}, recipeProps)
             .then(() => Recipe.findById({ _id: id}))
             .then(recipe => res.send(recipe))
+            .catch(next)
     }
     
 }
