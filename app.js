@@ -10,27 +10,21 @@ const router = require('./router');
 // creaete the express application
 const app = express();
 
-// DB Connection
-// const mongoose = require('mongoose');
-// mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/recipedb');
-// mongoose.connection 
-//     .once('open',() => { console.log('db open'); })
-//     .on('error', () => (error) => console.warn('Warning', error))
-
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
+var db;
+mongoose.connect(process.env.MONGODB_URI, function (err, database) {
     if (err) {
       console.log(err);
       process.exit(1);
     }
   
     db = database;
-    
+    console.log("Database connection ready");
+  
     var server = app.listen(process.env.PORT || 8080, function () {
-      var port = server.address().port;
-      console.log("App now running on port", port);
+        var port = server.address().port;
+        console.log("App now running on port", port);
     });
-})
+});
     
 
 // routes 
