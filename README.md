@@ -25,7 +25,7 @@
 </table>
 
 ## Schema
-```javacsript
+```javascript
 title: String,
 ingredients: [{
     name: String,
