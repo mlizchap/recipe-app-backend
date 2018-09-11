@@ -10,6 +10,8 @@ const router = require('./router');
 // creaete the express application
 const app = express();
 
+app.use(bodyParser.json())
+
 var db;
 mongoose.connect(process.env.MONGODB_URI, function (err, database) {
     if (err) {
