@@ -11,5 +11,9 @@ module.exports = {
             .then(recipe => res.send(recipe))
         
     },
+    index(req, res) {
+        Recipe.find({})
+            .then(users => res.send(users))
+    }
     
 }
