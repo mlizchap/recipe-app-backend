@@ -1,4 +1,10 @@
 # recipe-app-backend
+- a backend api that consists of a database of recipes 
+
+## Stack
+- mongodb/mongoose
+- mLab
+- deployed on Heroku
 
 ## Routes
 <table>
