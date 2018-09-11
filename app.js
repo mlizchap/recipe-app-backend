@@ -38,4 +38,3 @@ app.use((err, req, res, next) => {
 // middleware for cross origin resource sharing
 app.use(cors())
 
-module.exports = app;
