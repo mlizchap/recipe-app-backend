@@ -30,6 +30,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
       var port = server.address().port;
       console.log("App now running on port", port);
     });
+})
     
 
 // routes 
