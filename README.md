@@ -23,3 +23,14 @@
     <td>https://arcane-lowlands-94627.herokuapp.com/api/:id</td>
   </tr>
 </table>
+
+## Schema
+```javacsript
+title: String,
+ingredients: [{
+    name: String,
+    amount: String 
+}],
+picture: String,
+description: String
+```
