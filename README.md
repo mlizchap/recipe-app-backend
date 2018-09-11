@@ -2,6 +2,8 @@
 - a backend api that consists of a database of recipes 
 
 ## Stack
+- Node
+- Express
 - mongodb/mongoose
 - mLab
 - deployed on Heroku
